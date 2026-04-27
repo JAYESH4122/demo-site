@@ -1,0 +1,230 @@
+/* ── PROFILES SECTION ── */
+.profiles-section {
+  margin-top: 48px;
+  margin-bottom: 16px;
+}
+
+.profiles-header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 18px 0 14px;
+}
+
+.section-header.profiles-title {
+  margin: 0;
+  font-size: calc(24px * var(--font-scale));
+  font-weight: 500;
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+
+.profiles-nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.profiles-nav-btn {
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--text);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.profiles-nav-btn:hover:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  color: var(--blue);
+}
+
+.profiles-nav-btn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.profiles-nav-btn svg {
+  width: 16px;
+  height: 16px;
+}
+
+.profiles-slider-wrap {
+  overflow: hidden;
+}
+
+/* ── PROFILES SLIDER ── */
+.profiles-grid {
+  --profiles-gap: 14px;
+  --visible-cards: 4.5;
+  --visible-gaps: 4;
+
+  display: flex;
+  gap: var(--profiles-gap);
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  scroll-behavior: smooth;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+}
+
+.profiles-grid::-webkit-scrollbar {
+  display: none;
+}
+
+.profile-card {
+  flex: 0 0 calc((100% - (var(--visible-gaps) * var(--profiles-gap))) / var(--visible-cards));
+  background: var(--white);
+  border: 1px solid var(--border);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  scroll-snap-align: start;
+  box-shadow: 0 8px 24px rgba(17, 24, 39, 0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.profile-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(17, 24, 39, 0.12);
+}
+
+.profile-thumb {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.profile-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.profile-info {
+  padding: 12px 12px 11px;
+  flex-shrink: 0;
+}
+
+.profile-name-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: calc(17px * var(--font-scale));
+  font-weight: 600;
+  max-width: 100%;
+}
+
+.profile-name {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.verified-icon {
+  flex-shrink: 0;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.verified-icon svg {
+  width: 11px;
+  height: 11px;
+  fill: #fff;
+}
+
+.profile-loc-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: calc(14px * var(--font-scale));
+  color: var(--text-light);
+}
+
+.profile-loc {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.btn-follow {
+  flex-shrink: 0;
+  background: #1DA1F2;
+  border: 1.5px solid #1DA1F2;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: calc(14px * var(--font-scale));
+  font-weight: 600;
+  cursor: pointer;
+  font-family: var(--font);
+  min-width: 74px;
+  text-align: center;
+  line-height: 1.5;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.btn-follow.following {
+  background: none;
+  color: var(--text-light);
+  border-color: var(--border);
+}
+
+@media (max-width: 992px) {
+  .profiles-grid {
+    --visible-cards: 3.5;
+    --visible-gaps: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .profiles-header-row {
+    margin: 14px 0 12px;
+  }
+
+  .section-header.profiles-title {
+    font-size: calc(20px * var(--font-scale));
+  }
+
+  .profiles-nav {
+    display: none;
+  }
+
+  .profile-name-row {
+    font-size: calc(16px * var(--font-scale));
+  }
+
+  .profile-loc-row {
+    font-size: calc(12px * var(--font-scale));
+  }
+
+  .btn-follow {
+    padding: 3px 10px;
+    min-width: 60px;
+  }
+
+  .profiles-grid {
+    --profiles-gap: 12px;
+    --visible-cards: 1.5;
+    --visible-gaps: 1;
+  }
+}
