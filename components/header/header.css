@@ -13,6 +13,7 @@
   z-index: 100;
   flex-wrap: nowrap;
   max-width: 1280px;
+  width: 100%;
   margin: 0 auto;
 }
 @media (max-width: 1024px) {
@@ -969,4 +970,91 @@
   outline: none;
   background: transparent;
   cursor: pointer;
+}
+
+/* ── FEED NAV RIGHT ── */
+.feed-nav-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.feed-icon-btn {
+  background: #f0f2f5;
+  border: 1px solid #f0f2f5;
+  cursor: pointer;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.2s;
+  padding: 0;
+}
+.feed-icon-btn:hover {
+  background: #e4e6eb;
+  transform: scale(1.05);
+}
+.feed-icon-btn svg {
+  width: 30px;
+  height: 30fpx;
+}
+.feed-icon-btn.badge-btn .badge {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  background: #e41e3f;
+  color: white;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 5px;
+  border-radius: 10px;
+  border: 2px solid white;
+  font-family: var(--font);
+  line-height: 1;
+}
+.feed-profile-btn {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-items: flex-end;
+  gap: 4px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 5px;
+  position: relative;
+}
+.feed-profile-btn img {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.feed-profile-btn .chevron {
+  width: 14px;
+  height: 14px;
+  stroke: black;
+  stroke-width: 2.5;
+  fill: none;
+  margin-bottom: 2px;
+}
+@media (max-width: 1024px) {
+  .feed-nav-right .nav-burger-btn {
+    display: flex;
+  }
+}
+@media (max-width: 768px) {
+  .feed-icon-btn {
+    width: 38px;
+    height: 38px;
+  }
+  .feed-icon-btn svg {
+    width: 18px;
+    height: 18px;
+  }
+  .feed-profile-btn img {
+    width: 38px;
+    height: 38px;
+  }
 }

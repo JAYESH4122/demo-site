@@ -1,9 +1,9 @@
 // ── POSTS GRID
 (function() {
-  const grid = document.getElementById('postsGrid');
-  if (grid) {
+  function initPosts(grid) {
     const heartSvg = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>`;
     const moreSvg = `<svg viewBox="0 0 24 24" fill="currentColor" stroke="none"><circle cx="12" cy="5" r="1.5"/><circle cx="12" cy="12" r="1.5"/><circle cx="12" cy="19" r="1.5"/></svg>`;
+    
     grid.innerHTML = POSTS_DATA.map(p => `
       <div class="post-card">
         <div class="post-img">
@@ -13,7 +13,7 @@
         <div class="post-body">
           <div class="post-text">${p.text}</div>
           <div class="post-meta">
-            <span>${p.area}</span><span>${p.date}</span>
+            <span>${p.area}</span>
           </div>
         </div>
         <div class="post-footer">
@@ -44,5 +44,10 @@
       }
     });
   }
+
+  // Initialize all post grids
+  document.querySelectorAll('.posts-grid').forEach(grid => {
+    initPosts(grid);
+  });
 })();
 

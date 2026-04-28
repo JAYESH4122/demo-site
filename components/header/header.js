@@ -31,6 +31,34 @@
     <div class="nav-links" id="navLinks">
       ${d.nav.links.map(l => `<a href="#" data-section="${l}">${icons[l] || ''}${l}</a>`).join('')}
     </div>
+    ${document.body.classList.contains('feed-page') ? `
+    <div class="nav-right feed-nav-right">
+      <button class="nav-search-btn">
+        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <span>Search</span>
+      </button>
+      <button class="feed-icon-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </button>
+      <button class="feed-icon-btn badge-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        <span class="badge">12</span>
+      </button>
+      <button class="feed-icon-btn badge-btn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="1.6"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path><path d="M13.73 21a2 2 0 0 1-3.46 0"></path></svg>
+        <span class="badge">12</span>
+      </button>
+      <button class="feed-profile-btn">
+        <img src="https://i.pravatar.cc/150?u=jerry" alt="Profile" />
+        <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+      <button class="nav-burger-btn" type="button" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    ` : `
     <div class="nav-right">
       <button class="nav-burger-btn" type="button" aria-label="Toggle navigation" aria-controls="navLinks" aria-expanded="false">
         <span></span>
@@ -43,6 +71,7 @@
       </button>
       <button class="btn-member-login" onclick="openModal('login')"><span class="member-word">Member</span> Login</button>
     </div>
+    `}
   `;
 
   const navbar = document.getElementById('navbar');
@@ -373,7 +402,7 @@ function openModal(type) {
           </label>
           <span class="modal-forgot">Forgot Password ?</span>
         </div>
-        <button class="modal-btn-primary modal-btn-login">Login</button>
+        <button class="modal-btn-primary modal-btn-login" onclick="window.location.href='feed.html'">Login</button>
         <p class="modal-switch-text">
           Don't have an account? <span class="modal-switch-link" onclick="openModal('register')">Create FREE Account</span>
         </p>
