@@ -19,11 +19,11 @@ const HERO_DATA = {
   },
   leftImages: {
     top: {
-      src: "sections/hero/Screenshot from 2026-04-27 21-59-47.png",
+      src: "components/sections/hero/Screenshot from 2026-04-27 21-59-47.png",
       alt: "Upload your products and services banner",
     },
     bottom: {
-      src: "sections/hero/image.png",
+      src: "components/sections/hero/image.png",
       alt: "Get listed in public search banner",
     },
   },

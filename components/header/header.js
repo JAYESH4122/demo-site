@@ -2,10 +2,22 @@
 (function () {
   const d = HEADER_DATA;
   const icons = {
-    Home: `<svg viewBox="0 0 24 24"><path class="icon-outline" d="M3 11.5 12 4l9 7.5V20a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1z"/><path class="icon-fill" d="M12 3 2 11v10h7v-6h6v6h7V11L12 3z"/></svg>`,
-    Directory: `<svg viewBox="0 0 24 24"><g class="icon-outline"><circle cx="5" cy="6" r="1.5"/><circle cx="5" cy="12" r="1.5"/><circle cx="5" cy="18" r="1.5"/><path d="M9 6h11M9 12h11M9 18h11"/></g><g class="icon-fill"><path d="M3.5 4.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM3.5 10.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM3.5 16.5a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3ZM8 5h13v2H8zM8 11h13v2H8zM8 17h13v2H8z"/></g></svg>`,
-    Classifieds: `<svg viewBox="0 0 24 24"><g class="icon-outline"><path d="M3 8h18l-1.4 4.1a2 2 0 0 1-1.9 1.4H6.3a2 2 0 0 1-1.9-1.4L3 8z"/><path d="M5 13.5h14V19a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2v-5.5z"/><path d="M9 17h6"/><path d="M12 13.5V21"/></g><g class="icon-fill"><path d="M2 7h20l-1.6 5a2.4 2.4 0 0 1-2.3 1.7H5.9A2.4 2.4 0 0 1 3.6 12L2 7z"/><path d="M4.5 13.5h15V19a2 2 0 0 1-2 2h-11a2 2 0 0 1-2-2v-5.5z"/><path d="M11.25 14.5h1.5V21h-1.5z"/><path d="M8.5 17h7v1.5h-7z"/></g></svg>`,
-    Events: `<svg viewBox="0 0 24 24"><g class="icon-outline"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 9h18"/><path d="M8 3v4M16 3v4"/><rect x="9" y="12" width="6" height="5" rx="1"/></g><g class="icon-fill"><path d="M7 2h2v3h6V2h2v3h2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h2V2z"/><path d="M3 9h18v2H3z"/><path d="M10 12h4a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1h-4a1 1 0 0 1-1-1v-3a1 1 0 0 1 1-1z" fill="white"/></g></svg>`,
+    Home: `
+      <img src="components/assets/images/Home.jpg" class="icon-outline" alt="Home">
+      <img src="components/assets/images/Home Selected.jpg" class="icon-fill" alt="Home">
+    `,
+    Directory: `
+      <img src="components/assets/images/Directory.jpg" class="icon-outline" alt="Directory">
+      <img src="components/assets/images/Directory Selected.jpg" class="icon-fill" alt="Directory">
+    `,
+    Classifieds: `
+      <img src="components/assets/images/Classifieds.jpg" class="icon-outline" alt="Classifieds">
+      <img src="components/assets/images/Classifieds Selected.jpg" class="icon-fill" alt="Classifieds">
+    `,
+    Events: `
+      <img src="components/assets/images/Events.jpg" class="icon-outline" alt="Events">
+      <img src="components/assets/images/Events Selected.jpg" class="icon-fill" alt="Events">
+    `,
     Post: `<svg viewBox="0 0 24 24"><g class="icon-outline"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></g><g class="icon-fill"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M11 7h2v4h4v2h-4v4h-2v-4H7v-2h4z" fill="white"/></g></svg>`,
   };
 

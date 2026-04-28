@@ -11,27 +11,27 @@
   <link rel="stylesheet" href="style.css" />
   
   <!-- Component Styles -->
-  <link rel="stylesheet" href="header/header.css" />
-  <link rel="stylesheet" href="sections/hero/hero.css" />
-  <link rel="stylesheet" href="sections/profiles/profiles.css" />
-  <link rel="stylesheet" href="sections/posts/posts.css" />
-  <link rel="stylesheet" href="sections/footer/footer.css" />
+  <link rel="stylesheet" href="components/header/header.css" />
+  <link rel="stylesheet" href="components/sections/hero/hero.css" />
+  <link rel="stylesheet" href="components/sections/profiles/profiles.css" />
+  <link rel="stylesheet" href="components/sections/posts/posts.css" />
+  <link rel="stylesheet" href="components/sections/footer/footer.css" />
 </head>
 <body>
 
   <!-- Component Data -->
-  <script src="header/header_data.js"></script>
-  <script src="sections/hero/hero_data.js"></script>
-  <script src="sections/profiles/profiles_data.js"></script>
-  <script src="sections/posts/posts_data.js"></script>
-  <script src="sections/footer/footer_data.js"></script>
+  <script src="components/header/header_data.js"></script>
+  <script src="components/sections/hero/hero_data.js"></script>
+  <script src="components/sections/profiles/profiles_data.js"></script>
+  <script src="components/sections/posts/posts_data.js"></script>
+  <script src="components/sections/footer/footer_data.js"></script>
 
   <!-- Component Scripts -->
-  <script src="header/header.js" defer></script>
-  <script src="sections/hero/hero.js" defer></script>
-  <script src="sections/profiles/profiles.js" defer></script>
-  <script src="sections/posts/posts.js" defer></script>
-  <script src="sections/footer/footer.js" defer></script>
+  <script src="components/header/header.js" defer></script>
+  <script src="components/sections/hero/hero.js" defer></script>
+  <script src="components/sections/profiles/profiles.js" defer></script>
+  <script src="components/sections/posts/posts.js" defer></script>
+  <script src="components/sections/footer/footer.js" defer></script>
 
   <!-- NAVBAR -->
   <nav class="navbar" id="navbar"></nav>
@@ -58,21 +58,19 @@
     <section class="profiles-section" aria-label="Suggested Profiles">
       <div class="profiles-header-row">
         <h2 class="section-header profiles-title">Suggested Profiles</h2>
-        <div class="profiles-nav" aria-label="Profile slider controls">
-          <button class="profiles-nav-btn" id="profilesPrevBtn" type="button" aria-label="Scroll profiles left">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M15 18l-6-6 6-6"></path>
-            </svg>
-          </button>
-          <button class="profiles-nav-btn" id="profilesNextBtn" type="button" aria-label="Scroll profiles right">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <path d="M9 18l6-6-6-6"></path>
-            </svg>
-          </button>
-        </div>
       </div>
       <div class="profiles-slider-wrap">
+        <button class="profiles-nav-btn prev" id="profilesPrevBtn" type="button" aria-label="Scroll profiles left">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6"></path>
+          </svg>
+        </button>
         <div class="profiles-grid" id="profilesGrid"></div>
+        <button class="profiles-nav-btn next" id="profilesNextBtn" type="button" aria-label="Scroll profiles right">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 18l6-6-6-6"></path>
+          </svg>
+        </button>
       </div>
     </section>
 
