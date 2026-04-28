@@ -1,22 +1,26 @@
 // ── NAVBAR
 (function () {
   const d = HEADER_DATA;
+  const isFeed = document.body.classList.contains('feed-page');
+  const base = isFeed ? '../../' : 'app/';
+  const feedLink = isFeed ? 'feed.html' : 'app/pages/feed/feed.html';
+
   const icons = {
     Home: `
-      <img src="components/assets/images/Home.jpg" class="icon-outline" alt="Home">
-      <img src="components/assets/images/Home Selected.jpg" class="icon-fill" alt="Home">
+      <img src="${base}components/assets/images/Home.jpg" class="icon-outline" alt="Home">
+      <img src="${base}components/assets/images/Home Selected.jpg" class="icon-fill" alt="Home">
     `,
     Directory: `
-      <img src="components/assets/images/Directory.jpg" class="icon-outline" alt="Directory">
-      <img src="components/assets/images/Directory Selected.jpg" class="icon-fill" alt="Directory">
+      <img src="${base}components/assets/images/Directory.jpg" class="icon-outline" alt="Directory">
+      <img src="${base}components/assets/images/Directory Selected.jpg" class="icon-fill" alt="Directory">
     `,
     Classifieds: `
-      <img src="components/assets/images/Classifieds.jpg" class="icon-outline" alt="Classifieds">
-      <img src="components/assets/images/Classifieds Selected.jpg" class="icon-fill" alt="Classifieds">
+      <img src="${base}components/assets/images/Classifieds.jpg" class="icon-outline" alt="Classifieds">
+      <img src="${base}components/assets/images/Classifieds Selected.jpg" class="icon-fill" alt="Classifieds">
     `,
     Events: `
-      <img src="components/assets/images/Events.jpg" class="icon-outline" alt="Events">
-      <img src="components/assets/images/Events Selected.jpg" class="icon-fill" alt="Events">
+      <img src="${base}components/assets/images/Events.jpg" class="icon-outline" alt="Events">
+      <img src="${base}components/assets/images/Events Selected.jpg" class="icon-fill" alt="Events">
     `,
     Post: `<svg viewBox="0 0 24 24"><g class="icon-outline"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></g><g class="icon-fill"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2z"/><path d="M11 7h2v4h4v2h-4v4h-2v-4H7v-2h4z" fill="white"/></g></svg>`,
   };
@@ -402,7 +406,7 @@ function openModal(type) {
           </label>
           <span class="modal-forgot">Forgot Password ?</span>
         </div>
-        <button class="modal-btn-primary modal-btn-login" onclick="window.location.href='feed.html'">Login</button>
+        <button class="modal-btn-primary modal-btn-login" onclick="window.location.href='${document.body.classList.contains('feed-page') ? 'feed.html' : 'app/pages/feed/feed.html'}'">Login</button>
         <p class="modal-switch-text">
           Don't have an account? <span class="modal-switch-link" onclick="openModal('register')">Create FREE Account</span>
         </p>
